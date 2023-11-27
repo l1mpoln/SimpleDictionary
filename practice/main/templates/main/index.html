@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.english_word }}<br>
+        {{ form.russian_word }}<br>
+    <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <div class="container text-center">
+        <h1>Your words</h1>
+        <div class ="row align-items-center">
+            <div class="col">
+                <h2>Russian:</h2>
+                {% for el in words %}
+                    <p>{{ el.russian_word }}</p>
+                {% endfor %}
+            </div>
+            <div class="col">
+                <h2>English:</h2>
+                {% for el in words %}
+                    <p>{{ el.english_word }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
